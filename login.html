@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - Toko Buku Online</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/data.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body class="page-auth">
+  <header class="site-header auth-header">
+    <img src="IMG/logo.jpg" alt="Logo" class="logo" />
+    <h1>Toko Buku Online</h1>
+  </header>
+
+  <main class="auth-main card">
+    <h2>Masuk ke akun</h2>
+    <form id="loginForm" class="form">
+      <input id="email" type="email" placeholder="Email" required />
+      <input id="password" type="password" placeholder="Password" required />
+      <button id="loginBtn" class="btn primary">Login</button>
+      <div class="auth-actions">
+        <button id="openRegister" class="link">Daftar</button>
+        <button id="openForgot" class="link">Lupa Password?</button>
+      </div>
+    </form>
+    <p class="muted">Gunakan akun dari data pengguna (lihat data.js) atau daftar baru.</p>
+  </main>
+
+  <!-- Modals -->
+  <div id="modalRegister" class="modal">
+    <div class="modal-card">
+      <h3>Daftar Akun Baru</h3>
+      <input id="regName" placeholder="Nama lengkap" />
+      <input id="regEmail" placeholder="Email" />
+      <input id="regPassword" placeholder="Password" type="password" />
+      <div class="modal-actions">
+        <button id="btnRegister" class="btn primary">Daftar</button>
+        <button class="btn" data-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalForgot" class="modal">
+    <div class="modal-card">
+      <h3>Reset Password</h3>
+      <input id="forgotEmail" placeholder="Masukkan email" />
+      <div class="modal-actions">
+        <button id="btnForgot" class="btn primary">Kirim Link (simulasi)</button>
+        <button class="btn" data-close>Close</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

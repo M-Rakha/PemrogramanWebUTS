@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout - Toko Buku Online</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/data.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <img src="IMG/logo.jpg" alt="Logo" class="logo" />
+    <h1>Toko Buku Online</h1>
+    <div class="header-actions">
+      <a href="stok.html" class="btn small ghost">Kembali ke Katalog</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Keranjang Anda</h2>
+      <div id="checkoutItems"></div>
+      <div class="checkout-total">Total: <strong id="checkoutTotal">Rp0</strong></div>
+    </section>
+
+    <section class="card">
+      <h3>Informasi Pengiriman & Pembayaran</h3>
+      <input id="c_nama" placeholder="Nama Lengkap" />
+      <input id="c_email" placeholder="Email" />
+      <input id="c_alamat" placeholder="Alamat Lengkap" />
+      <select id="c_pembayaran">
+        <option value="Transfer">Transfer Bank</option>
+        <option value="COD">COD</option>
+        <option value="E-Wallet">E-Wallet</option>
+      </select>
+      <button id="placeOrder" class="btn primary">Konfirmasi & Pesan</button>
+    </section>
+  </main>
+</body>
+</html>

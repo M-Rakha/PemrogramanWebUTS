@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard - Toko Buku Online</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/data.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <img src="IMG/logo.jpg" alt="Logo" class="logo" />
+    <h1>Toko Buku Online</h1>
+    <div class="header-actions">
+      <span id="notifBell" class="notif">🔔<span id="notifCount" class="badge">0</span></span>
+      <button id="btnProfile" class="btn small">Profil</button>
+      <a href="login.html" id="btnLogout" class="btn small ghost">Keluar</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="dashboard-top card">
+      <h2 id="greeting">Selamat Datang</h2>
+      <p id="welcomeText" class="muted"></p>
+    </section>
+
+    <section class="dashboard-grid">
+      <a class="tile" href="stok.html">📚 Katalog & Stok</a>
+      <a class="tile" href="checkout.html">🛒 Keranjang & Checkout</a>
+      <a class="tile" href="tracking.html">🚚 Tracking Pengiriman</a>
+      <a class="tile" href="#" id="openOrders">🧾 Riwayat Pembelian</a>
+    </section>
+  </main>
+
+  <!-- Simple chat widget -->
+  <div id="chatWidget" class="chat-widget closed">
+    <div class="chat-header">Chat Admin <button id="chatToggle" class="btn tiny">✖</button></div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-footer">
+      <input id="chatInput" placeholder="Tulis pesan..." />
+      <button id="chatSend" class="btn tiny">Kirim</button>
+    </div>
+  </div>
+
+  <!-- Orders Modal -->
+  <div id="modalOrders" class="modal">
+    <div class="modal-card">
+      <h3>Riwayat Pembelian</h3>
+      <div id="ordersList"></div>
+      <div class="modal-actions"><button data-close class="btn">Tutup</button></div>
+    </div>
+  </div>
+</body>
+</html>
